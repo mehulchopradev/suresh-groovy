@@ -1,0 +1,7 @@
+Object oriented programming (OOP)
+  Real world - Software world
+
+  1. Real world actors - Data occupying some space in the RAM (objects). Data type for an object - (class). A class is
+  a blueprint for an object. From a class we can create n objects
+  2. Real world actor characteristics - Object attributes
+  3. Real world actor actions - Methods called on the object
