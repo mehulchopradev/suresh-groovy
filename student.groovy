@@ -1,9 +1,17 @@
 // Person X
+
+// In the RAM an object is created per class - Class (java)
 class Student {
+  // object attributes
   String name
   Character gender
   Integer roll
   Float marks
+
+  // class attribute
+  // shared by all the Student objects
+  // Access using the class name
+  static Integer count = 0
 
 
   // implicitly defined (defaults)
@@ -18,6 +26,8 @@ class Student {
   Student(String name, Character gender, Integer roll, Float marks) {
     // this implicit parameter
 
+    Student.count++
+
     // object attributes have also been initialized
     this.name = name
     this.gender = gender
@@ -27,10 +37,11 @@ class Student {
 
   // overloaded constructor
   Student() {
-
+    Student.count++
   }
 
   String getDetails() {
+    println this
     "Name: ${this.name}\nRoll: ${this.roll}\nGender: ${this.gender}\nMarks: ${this.marks}"
   }
 
@@ -44,6 +55,13 @@ class Student {
     }
   }
 
+  static Integer getcount() {
+    // there is no implicit this parameter
+    // static functions
+    // println this.count // this in this case is the address of the Class object of Student class
+    Student.count
+  }
+
   // Internally
   /* def getDetails(this) {
     // this is implicit
@@ -53,6 +71,9 @@ class Student {
 
 
 // Person Y
+// println Student.count
+println Student.getcount()
+
 def s1 = new Student('mehul', 'm' as Character, 10, 90)
 // new - 3003 - Student
 // Student('mehul', 'm', 10, 90, 3003)
@@ -76,6 +97,8 @@ s2.name = 'jane'
 s2.gender = 'f'
 s2.roll = 11
 s2.marks = 45
+
+println Student.count
 
 // acccess (getting) the object attributes (properties)
 /* println s1.name
