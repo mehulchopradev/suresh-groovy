@@ -90,3 +90,33 @@ pointers.each {
     println it
   }
 }
+
+// get a new list consiting of only the odd elements from the pointers list (filtering)
+println 'New list of odd elements'
+def odds = pointers.findAll {it % 2}
+println odds
+
+// get a new list consisting of squares of elements from the pointers list (mapping)
+println 'New list of squares'
+def squares = pointers.collect {it ** 2}
+println squares
+
+def has10pointer = pointers.any {it == 10}
+println has10pointer
+
+def allPassed = pointers.every {it > 0}
+println allPassed
+
+// chaining
+println 'Cubes of even pointers greater than 5' // filtering + mapping
+
+def e = pointers.findAll {!(it % 2) && (it > 5)}.collect {it ** 3}
+println e
+
+println 'Ascending Sorting'
+def so = pointers.sort()
+println so
+
+println 'Descending Sorting'
+def des = pointers.sort {a, b -> b <=> a} // spaceship operator (compareTo)
+println des
