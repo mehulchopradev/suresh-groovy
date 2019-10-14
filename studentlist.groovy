@@ -1,3 +1,5 @@
+import com.abc.college.domain.Student
+
 /*def slist = [
   new Student('mehul', 'm' as Character, 10, 90),
   new Student('jane', 'f' as Character, 12, 80),
@@ -19,7 +21,7 @@ def smap = [
   5: new Student('suresh', 'm' as Character, 5, 95)
 ]
 
-def search = 1000
+def search = 10
 def result = smap[search]
 if (result) {
   println result.getDetails()

@@ -1,6 +1,11 @@
+package com.abc.college.domain
 // Person X
 
 // In the RAM an object is created per class - Class (java)
+/*
+ Unlike Java where the default access specifier is 'default' -- class, method, properties, constructor
+ can be accessedonly from within the package; in groovy all the above have a default access specifier of public
+*/
 class Student {
   // object attributes
   String name

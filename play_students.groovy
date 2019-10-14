@@ -1,3 +1,5 @@
+import com.abc.college.domain.Student
+
 // Person Y
 // println Student.count
 println Student.getcount()
