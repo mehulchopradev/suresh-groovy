@@ -30,4 +30,12 @@ class Account {
       println 'Transaction ends'
     }
   }
+
+  def plus(amt) {
+    this.balance += amt
+  }
+
+  def minus(amt) {
+    this.withdraw(amt)
+  }
 }

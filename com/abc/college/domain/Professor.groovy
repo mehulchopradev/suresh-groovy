@@ -19,5 +19,19 @@ class Professor extends CollegeUser implements CalcSal {
     this.costPerDay
   }
 
+  def leftShift(subject) {
+    // this - current object
+    if (this.subjects == null) {
+      this.subjects = []
+    }
+
+    this.subjects.add(subject)
+    this
+  }
+
+  def isCase(subject) {
+    this.subjects.contains(subject)
+  }
+
   // can have its own set of methods too
 }

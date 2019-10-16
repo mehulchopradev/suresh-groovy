@@ -18,4 +18,8 @@ class Book {
       this.price = price
     }
   }
+
+  String toString() {
+    "Title: ${this.title}\nPages: ${this.pages}\nPrice: ${this.price}"
+  }
 }
