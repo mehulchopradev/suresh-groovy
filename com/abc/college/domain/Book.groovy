@@ -5,6 +5,7 @@ class Book {
   String title
   Integer pages
   Float price
+  List authors = []
 
   // every groovy bean along with the no arg constructor, gets a constructor that takes in a Map
   // every groovy bean gives us java bean convention style getters/setters for each of the object attributes
